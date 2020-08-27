@@ -3,7 +3,7 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="glide.css">
+    <link rel="stylesheet" type="text/css" href="glide.css">>
     <style>
       html, body {
         height: 100%;
@@ -141,9 +141,33 @@
         width: 100%;
         border-radius: 5px;
         position: relative;
-        padding-top: 30%;
-        padding-bottom: 30%;
+        padding-top: 20%;
+        padding-bottom: 20%;
         text-align: center;
+      }
+      .groupBlockTitle {
+        font-family: league-gothic, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+      }
+      .groupBlockButton {
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: white;
+        color: #a6a6a6;
+        border: 2px solid #a6a6a6;
+        border-radius: 25px;
+      }
+      .groupBlockButton:hover {
+        background-color: #a6a6a6;
+        color: white;
       }
       .meetingBlock {
 
@@ -198,11 +222,37 @@
           <div class="glide">
             <div class="glide__track" data-glide-el="track">
               <ul class="glide__slides">
-                <li class="glide__slide"><div class="groupBlock">group 1</div></li>
-                <li class="glide__slide"><div class="groupBlock">group 2</div></li>
-                <li class="glide__slide"><div class="groupBlock">group 3</div></li>
-                <li class="glide__slide"><div class="groupBlock">group 4</div></li>
-                <li class="glide__slide"><div class="groupBlock">group 5</div></li>
+                <li class="glide__slide">
+                  <div class="groupBlock">
+                    <div class="groupBlockTitle">
+                      group 1
+                    </div>
+                    <button type="button" class="groupBlockButton">Group Details</button>
+
+
+
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="groupBlock">
+                    group 2
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="groupBlock">
+                    group 3
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="groupBlock">
+                    group 4
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="groupBlock">
+                    group 5
+                  </div>
+                </li>
 
               </ul>
             </div>
