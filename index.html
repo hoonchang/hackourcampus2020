@@ -132,7 +132,10 @@
         width: 90%;
       }
       #myMeetingsContainer {
-
+        top: 2%;
+        left: 5%;
+        position: relative;
+        width: 90%;
       }
       .groupBlock {
         background-color: #d1e8e7;
@@ -149,12 +152,6 @@
         font-family: league-gothic, sans-serif;
         font-size: 15px;
         font-weight: 700;
-        color: white;
-      }
-      .spacer {
-        font-family: league-gothic, sans-serif;
-        font-size: 10px;
-        font-weight: 500;
         color: white;
       }
       .groupBlockButton {
@@ -175,8 +172,52 @@
         background-color: #78d1cc;
         color: white;
       }
+      .spacer {
+        font-family: league-gothic, sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        color: white;
+      }
+      .meetingTime {
+        font-family: league-gothic, sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        color: white;
+      }
       .meetingBlock {
-
+        background-color: #c8b3da;
+        color: #a6a6a6;
+        height: 100%;
+        width: 100%;
+        border-radius: 5px;
+        position: relative;
+        padding-top: 15%;
+        padding-bottom: 15%;
+        text-align: center;
+      }
+      .meetingBlockTitle {
+        font-family: league-gothic, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        color: white;
+      }
+      .meetingBlockButton {
+        padding: 4px 8px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: white;
+        color: #7640a3;
+        border: 2px solid #7640a3;
+        border-radius: 25px;
+      }
+      .meetingBlockButton:hover {
+        background-color: #7640a3;
+        color: white;
       }
     </style>
 
@@ -231,7 +272,7 @@
                 <li class="glide__slide">
                   <div class="groupBlock">
                     <div class="groupBlockTitle">
-                      group 1
+                      CS 1110
                     </div>
                     <div class="spacer">
                       &nbsp;
@@ -242,7 +283,7 @@
                 <li class="glide__slide">
                   <div class="groupBlock">
                     <div class="groupBlockTitle">
-                      group 2
+                      GUITAR
                     </div>
                     <div class="spacer">
                       &nbsp;
@@ -253,7 +294,7 @@
                 <li class="glide__slide">
                   <div class="groupBlock">
                     <div class="groupBlockTitle">
-                      group 3
+                      MATH 2940
                     </div>
                     <div class="spacer">
                       &nbsp;
@@ -271,23 +312,83 @@
           </div>
         </div>
     </div>
+
+
     <div id="myMeetingsBox">
       <div id="myMeetingsBoxHeader">
         <div class="headerText">
           MY MEETINGS
         </div>
       </div>
+      <div id="myMeetingsContainer">
+          <div class="glide">
+            <div class="glide__track" data-glide-el="track">
+              <ul class="glide__slides">
+                <li class="glide__slide">
+                  <div class="meetingBlock">
+                    <div class="meetingBlockTitle">
+                      GUITAR
+                    </div>
+                    <div class="spacer">
+                      Starts at 11:00 AM
+                    </div>
+                    <button type="button" class="meetingBlockButton">Details</button>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="meetingBlock">
+                    <div class="meetingBlockTitle">
+                      MATH 2940
+                    </div>
+                    <div class="spacer">
+                      Starts at 11:30 AM
+                    </div>
+                    <button type="button" class="meetingBlockButton">Details</button>
+                  </div>
+                </li>
+                <li class="glide__slide">
+                  <div class="meetingBlock">
+                    <div class="meetingBlockTitle">
+                      CS 1110
+                    </div>
+                    <div class="meetingTime">
+                      Starts at 1:00 PM
+                    </div>
+                    <button type="button" class="meetingBlockButton">Details</button>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+            <div class="glide__arrows" data-glide-el="controls">
+              <button class="glide__arrow glide__arrow--left" data-glide-dir="<">&lt;</button>
+              <button class="glide__arrow glide__arrow--right" data-glide-dir=">">&gt;</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+
     </div>
 
 
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
   <script>
-  	const config = {
+
+
+    const sliders = document.querySelectorAll('.glide')
+    const conf = {
     	type: 'carousel',
       perView: 3
     }
-    new Glide('.glide', config).mount()
+    sliders.forEach(item => {
+      new Glide(item, conf).mount()
+    })
   </script>
+
 
   </body>
 
