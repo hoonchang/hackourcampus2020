@@ -202,57 +202,51 @@
         outline:none;
       }
       .dropdown-content {
-  display: none;
-  position: absolute;
-  left: 22%;
-
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-  text-align: center;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 8px 12px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;}
-
-#timezoneButtonContainer {
-  padding-top: 8%;
-  position: relative;
-}
-#timezoneButton {
-  padding: 8px 16px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 14px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  background-color: white;
-  color: #a6a6a6;
-  border: 2px solid #a6a6a6;
-  border-radius: 25px;
-  outline:none;
-}
-#timezoneButton:hover {
-  background-color: #a6a6a6;
-  color: white;
-  outline:none;
-}
+        display: none;
+        position: absolute;
+        left: 22%;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        text-align: center;
+      }
+      .dropdown-content a {
+        color: black;
+        padding: 8px 12px;
+        text-decoration: none;
+        display: block;
+      }
+      .dropdown a:hover {background-color: #ddd;}
+      .show {display: block;}
+      #timezoneButtonContainer {
+        padding-top: 8%;
+        position: relative;
+      }
+      #timezoneButton {
+        padding: 8px 16px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 14px;
+        margin: 4px 2px;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        background-color: white;
+        color: #a6a6a6;
+        border: 2px solid #a6a6a6;
+        border-radius: 25px;
+        outline:none;
+      }
+      #timezoneButton:hover {
+        background-color: #a6a6a6;
+        color: white;
+        outline:none;
+      }
     </style>
 
   </head>
-
 
   <body>
     <div id="logoTopLeft">
@@ -282,13 +276,13 @@
         </div>
         <div id="timezoneButtonContainer">
           <div class="dropdown">
-  <button onclick="myFunction()" id="timezoneButton">Change Timezone</button>
-  <div id="myDropdown" class="dropdown-content">
-    <a href="#PDT">PDT</a>
-    <a href="#MDT">MDT</a>
-    <a href="#CDT">CDT</a>
-  </div>
-</div>
+            <button onclick="myFunction()" id="timezoneButton">Change Timezone</button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#PDT">PDT</a>
+              <a href="#MDT">MDT</a>
+              <a href="#CDT">CDT</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
